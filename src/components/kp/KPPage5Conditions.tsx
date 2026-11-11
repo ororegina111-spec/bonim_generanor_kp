@@ -1,6 +1,6 @@
 import { KPFormData } from '@/hooks/useKPData';
 import { BRAND } from '@/data/brand';
-import logoWhite from '@/assets/kp/bonim_logo_flat_white.png';
+import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 
 interface Props {
   data: KPFormData;
@@ -16,7 +16,7 @@ export function KPPage5Conditions({ data }: Props) {
 
       <div className="inner" style={{paddingTop:'12px'}}>
         <ul className="cond-list">
-          <li>Цена ориентировочная, основана на размерах и информации заказчика, указана без НДС. Окончательная цена определяется после профессионального замера на объекте.</li>
+          <li>Цена ориентировочная, основана на размерах и информации заказчика, указана с НДС 18%. Окончательная цена определяется после профессионального замера на объекте.</li>
           <li>Цена за м² остаётся неизменной. Если фактические размеры отличаются от заявленных, стоимость корректируется пропорционально.</li>
           <li>КП не является подтверждением заказа. Заказ вступает в силу после подписания формы заказа и/или внесения аванса. Внесение аванса означает согласие со всеми условиями.</li>
           <li>Срок изготовления – {BRAND.productionDays} рабочих дня с момента оплаты аванса. Окончательный срок фиксируется после замера.</li>
@@ -64,7 +64,7 @@ export function KPPage5Conditions({ data }: Props) {
       <div style={{flex:1}}></div>
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoWhite} alt="BONIM" />
+        <img className="fb-logo" src={logoBlue} alt="BONIM" />
         <span className="fc"><span className="v">{data.clientName || '–'}</span> · <span className="v">{data.city || '–'}</span> · {BRAND.site}</span>
         <span className="fn">4</span>
       </div>

@@ -13,6 +13,7 @@ import { exportAsHTML, printPDF } from '@/lib/kp-export';
 import '@/styles/kp-template.css';
 import '@/styles/kp-template-he.css';
 import '@/styles/kp-bonim-extra.css';
+import '@/styles/kp-bonim-light.css';
 
 const Index = () => {
   const { formData, updateField, resetForm, computed } = useKPData();

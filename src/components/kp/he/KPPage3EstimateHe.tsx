@@ -1,7 +1,7 @@
 import { KPFormData, KPComputed } from '@/hooks/useKPData';
 import { getSystem } from '@/data/systems';
 import { BRAND } from '@/data/brand';
-import logoWhite from '@/assets/kp/bonim_logo_flat_white.png';
+import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 
 interface Props {
   data: KPFormData;
@@ -72,7 +72,7 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
               <td>{data.productType}</td>
               <td>{sys.he.tagline}</td>
               <td><span className="v">{computed.area}</span> מ״ר</td>
-              <td><span className="v">{fmt(data.pricePerSqm)}</span> ₪/מ״ר</td>
+              <td><span className="v">{fmt(computed.priceGross)}</span> ₪/מ״ר</td>
             </tr>
             <tr>
               <td>2</td>
@@ -93,10 +93,10 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
               <td>עבודות נוספות / פסי אלומיניום</td>
               <td>לפי מידות האתר</td>
               <td>–</td>
-              <td><span className="v">{computed.extrasStr}</span> ₪</td>
+              <td><span className="v">{fmt(computed.extrasGross)}</span> ₪</td>
             </tr>
             <tr className="total">
-              <td colSpan={3}><strong>סה״כ (אומדן)</strong></td>
+              <td colSpan={3}><strong>סה״כ כולל מע״מ (אומדן)</strong></td>
               <td style={{whiteSpace:'nowrap', fontSize:'0.85rem'}}><span className="v">{computed.area}</span> מ״ר</td>
               <td style={{whiteSpace:'nowrap', fontSize:'0.85rem'}}><span className="v">{computed.totalPrice}</span> ₪</td>
             </tr>
@@ -104,7 +104,7 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
         </table>
 
         <div className="note-box" style={{fontSize:'0.75rem', lineHeight:'1.3', padding:'6px 12px'}}>
-          ⚠️ המחירים מוצגים ללא מע״מ והינם אומדן בלבד. מבוססים על המידות שנמסרו על ידי הלקוח. המחיר הסופי ייקבע לאחר מדידה מקצועית. מחיר המ״ר נשאר קבוע.
+          ⚠️ כל המחירים כוללים מע״מ 18% (מתוכם מע״מ: {computed.vatStr} ₪) והינם אומדן בלבד. מבוססים על המידות שנמסרו על ידי הלקוח. המחיר הסופי ייקבע לאחר מדידה מקצועית. מחיר המ״ר נשאר קבוע.
         </div>
 
         <div className="guarantee-box" style={{marginTop:'6px', padding:'8px 16px', display:'flex', alignItems:'center', gap:'10px'}}>
@@ -116,7 +116,7 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
       <div style={{flex:1}}></div>
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoWhite} alt="BONIM" />
+        <img className="fb-logo" src={logoBlue} alt="BONIM" />
         <span className="fc">לקוח: <span className="v">{data.clientName || '–'}</span> · {BRAND.phone}</span>
         <span className="fn">2</span>
       </div>

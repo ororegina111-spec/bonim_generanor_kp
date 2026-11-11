@@ -1,7 +1,7 @@
 import { KPFormData, KPComputed } from '@/hooks/useKPData';
 import { getSystem } from '@/data/systems';
 import { BRAND } from '@/data/brand';
-import logoWhite from '@/assets/kp/bonim_logo_flat_white.png';
+import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 import hero from '@/assets/kp/hero_cover.jpg';
 
 interface Props {
@@ -15,7 +15,7 @@ export function KPPage1Cover({ data, computed }: Props) {
     <div className="kp-page cover">
       <div className="cover-top">
         <div className="cover-logo">
-          <img src={logoWhite} alt="BONIM" />
+          <img src={logoBlue} alt="BONIM" />
         </div>
         <div className="cover-meta">
           <span className="order-no">№ {data.orderNumber || '–'}</span>
@@ -61,7 +61,7 @@ export function KPPage1Cover({ data, computed }: Props) {
       </div>
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoWhite} alt="BONIM" />
+        <img className="fb-logo" src={logoBlue} alt="BONIM" />
         <span className="fc">{BRAND.site} · {BRAND.phone}</span>
         <span className="fn">1</span>
       </div>

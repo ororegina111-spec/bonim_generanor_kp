@@ -21,7 +21,16 @@ export interface KPComputed {
   lengthStr: string;
   heightStr: string;
   extrasStr: string;
+  /** Ниже: цены с НДС для показа клиенту (числа) */
+  vatRate: number;
+  priceGross: number;
+  extrasGross: number;
+  vatAmount: number;
+  vatStr: string;
 }
+
+/** НДС в Израиле, 18%. Менеджер вводит цены БЕЗ НДС, в КП клиент видит цены С НДС. */
+export const VAT_RATE = 0.18;
 
 const fmt = (n: number) => n.toLocaleString('ru-RU');
 
@@ -57,8 +66,14 @@ export function useKPData() {
   const computed: KPComputed = useMemo(() => {
     const area = (formData.length * formData.height) / 10000;
     const systemCost = Math.round(area * formData.pricePerSqm);
-    const total = systemCost + formData.extras;
+    const net = systemCost + formData.extras;
+    const total = Math.round(net * (1 + VAT_RATE));
     return {
+      vatRate: VAT_RATE,
+      priceGross: Math.round(formData.pricePerSqm * (1 + VAT_RATE)),
+      extrasGross: Math.round(formData.extras * (1 + VAT_RATE)),
+      vatAmount: total - net,
+      vatStr: fmt(total - net),
       area: area.toFixed(2),
       systemCost: fmt(systemCost),
       totalPrice: fmt(total),

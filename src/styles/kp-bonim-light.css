@@ -1,0 +1,136 @@
+/* ════════════════════════════════
+   BONIM: светлая стилистика с бликами как на стекле
+   Подключается последней и переопределяет тёмные блоки шаблона.
+   Цвета: тёмно-синий текст #082B52, синий #054483, светло-голубой #EAF3FC.
+════════════════════════════════ */
+
+/* Блик как на стекле: белая диагональная полоса поверх блока */
+.kp-page .est-header,
+.kp-page .cond-head,
+.kp-page .cover-strip,
+.kp-page .sys-card2-head,
+.kp-page .pay-step,
+.kp-page .guarantee-box,
+.kp-page .sys-box,
+.kp-page .size-card,
+.kp-page .pg-footer {
+  position: relative;
+  overflow: hidden;
+}
+.kp-page .est-header::after,
+.kp-page .cond-head::after,
+.kp-page .cover-strip::after,
+.kp-page .sys-card2-head::after,
+.kp-page .pay-step::after,
+.kp-page .guarantee-box::after,
+.kp-page .sys-box::after,
+.kp-page .size-card::after,
+.kp-page .pg-footer::after {
+  content: '';
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg,
+    rgba(255,255,255,0) 0%, rgba(255,255,255,.75) 18%, rgba(255,255,255,0) 34%,
+    rgba(255,255,255,.45) 46%, rgba(255,255,255,0) 54%);
+}
+
+/* ── Обложка ── */
+.kp-page.cover { background: linear-gradient(165deg,#FFFFFF 0%,#EAF3FC 60%,#F7FBFF 100%); }
+.kp-page .cover-top { border-bottom: 1px solid #D5E1EE; }
+.kp-page .cover-logo img { height: 58px; }
+.kp-page .cover-meta { color: #5A6B7D; }
+.kp-page .cover-meta .order-no {
+  background: none; -webkit-text-fill-color: #054483; color: #054483;
+}
+.kp-page .cover-hero { flex: none; background: #EAF3FC; }
+.kp-page .cover-hero img { height: 98mm; opacity: 1; filter: brightness(1.08) saturate(1.12); }
+.kp-page .cover-hero-grad { display: none; }
+.kp-page .cover-title { position: static; padding: 22px 36px 14px; }
+.kp-page .cover-title .label { color: #4A86C8; }
+.kp-page .cover-title h1 { color: #082B52; }
+.kp-page .cover-title h1 .gold-text {
+  background: linear-gradient(135deg,#054483 0%,#4A86C8 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.kp-page .cover-title .sub { color: #5A6B7D; }
+.kp-page .cover-strip {
+  background: #EAF3FC; border-top: 1px solid #D5E1EE; border-bottom: 1px solid #D5E1EE;
+}
+.kp-page .strip-item label { color: #4A86C8; }
+.kp-page .strip-item span { color: #082B52; }
+.kp-page .cover-greet { color: #3B4C60; border-top: none; }
+.kp-page .cover-greet strong { color: #082B52; }
+
+/* ── Смета ── */
+.kp-page .est-header {
+  background: linear-gradient(135deg,#EAF3FC 0%,#FFFFFF 100%);
+  border-bottom: 2px solid #4A86C8;
+}
+.kp-page .est-header .label { color: #4A86C8; }
+.kp-page .est-header h2 { color: #082B52; }
+.kp-page .est-header .sub { color: #5A6B7D; }
+.kp-page .size-card { background: linear-gradient(135deg,#FFFFFF,#F2F7FC); }
+.kp-page table.spec th { background: #DCE9F6; color: #082B52; }
+.kp-page table.spec tr:nth-child(even) td { background: #F6FAFE; }
+.kp-page table.spec .total td {
+  background: #EAF3FC; color: #082B52; border-top: 2px solid #4A86C8;
+}
+.kp-page table.spec .total td:last-child {
+  color: #054483 !important; -webkit-text-fill-color: #054483; text-shadow: none;
+}
+.kp-page .guarantee-box { background: #EEF4FB; border: 1px solid #D5E1EE; }
+.kp-page .guarantee-box h5 { color: #054483; }
+.kp-page .guarantee-box p { color: #3B4C60; }
+
+/* ── Страница «Системы» ── */
+.kp-page .sys-hero-ov {
+  background: linear-gradient(90deg,rgba(255,255,255,.82) 0%,rgba(255,255,255,.35) 45%,rgba(255,255,255,0) 75%);
+}
+.kp-page .sys-hero img { filter: brightness(1.08) saturate(1.1); }
+.kp-page .sys-hero-txt .label { color: #054483; }
+.kp-page .sys-hero-txt h2 { color: #082B52; }
+.kp-page .sys-card2-head { background: linear-gradient(135deg,#EAF3FC,#FFFFFF); border-bottom: 1px solid #D5E1EE; }
+.kp-page .sys-card2-head h4 { color: #082B52; }
+.kp-page .sys-card2-head p { color: #5A6B7D; }
+.kp-page .sys-card2-photo > img { filter: brightness(1.06) saturate(1.1); }
+
+/* ── Условия ── */
+.kp-page .cond-head {
+  background: linear-gradient(135deg,#EAF3FC 0%,#FFFFFF 100%);
+  border-bottom: 2px solid #4A86C8;
+}
+.kp-page .cond-head .label { color: #4A86C8; }
+.kp-page .cond-head h2 { color: #082B52; }
+.kp-page .pay-step {
+  background: linear-gradient(135deg,#FFFFFF 0%,#EAF3FC 100%);
+  border: 1px solid #BBD3EC;
+  box-shadow: 0 2px 8px rgba(5,68,131,.08);
+}
+.kp-page .pay-step .pct {
+  background: none; -webkit-text-fill-color: #054483; color: #054483;
+}
+.kp-page .pay-step .pct-sub { color: #4A86C8; }
+.kp-page .pay-step .when { color: #4A5B6E; }
+.kp-page .pay-step.pay-free { border-color: #4A86C8; }
+
+/* ── Подвал ── */
+.kp-page .pg-footer {
+  background: linear-gradient(135deg,#EAF3FC 0%,#FFFFFF 100%);
+  border-top: 1px solid #D5E1EE;
+}
+.kp-page .pg-footer .fc { color: #5A6B7D; }
+.kp-page .pg-footer .fn { color: #7A8CA0; }
+
+/* Обложка: подвал прижат к низу страницы, условия умещаются на одну страницу */
+.kp-page .cover-greet { flex: 1; }
+.kp-page .cond-list li { margin-bottom: 6px; }
+
+/* Текст всегда поверх блика, чтобы не выцветал */
+.kp-page .est-header > *, .kp-page .cond-head > *, .kp-page .cover-strip > *,
+.kp-page .sys-card2-head > *, .kp-page .pay-step > *, .kp-page .guarantee-box > *,
+.kp-page .sys-box > *, .kp-page .size-card > *, .kp-page .pg-footer > * {
+  position: relative; z-index: 1;
+}
+.kp-page .est-header::after, .kp-page .cond-head::after, .kp-page .cover-strip::after,
+.kp-page .sys-card2-head::after, .kp-page .pay-step::after, .kp-page .guarantee-box::after,
+.kp-page .sys-box::after, .kp-page .size-card::after, .kp-page .pg-footer::after { z-index: 0; }

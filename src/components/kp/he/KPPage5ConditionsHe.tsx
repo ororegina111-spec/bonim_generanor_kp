@@ -1,6 +1,6 @@
 import { KPFormData } from '@/hooks/useKPData';
 import { BRAND } from '@/data/brand';
-import logoWhite from '@/assets/kp/bonim_logo_flat_white.png';
+import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 
 interface Props {
   data: KPFormData;
@@ -16,7 +16,7 @@ export function KPPage5ConditionsHe({ data }: Props) {
 
       <div className="inner" style={{paddingTop:'12px'}}>
         <ul className="cond-list">
-          <li>המחיר הוא אומדן, מבוסס על המידות והמידע שנמסרו על ידי הלקוח, ללא מע״מ. המחיר הסופי ייקבע לאחר מדידה מקצועית באתר.</li>
+          <li>המחיר הוא אומדן, מבוסס על המידות והמידע שנמסרו על ידי הלקוח, כולל מע״מ 18%. המחיר הסופי ייקבע לאחר מדידה מקצועית באתר.</li>
           <li>מחיר המ״ר נשאר ללא שינוי. אם יימצאו סטיות במידות, המחיר הכולל יעודכן בהתאם.</li>
           <li>הצעה זו אינה אישור הזמנה. ההזמנה נכנסת לתוקף עם חתימה על טופס הזמנה ו/או תשלום מקדמה. תשלום המקדמה מהווה הסכמה לכל התנאים.</li>
           <li>זמן הייצור – {BRAND.productionDays} ימי עבודה ממועד תשלום המקדמה. המועד הסופי נקבע לאחר המדידה.</li>
@@ -64,7 +64,7 @@ export function KPPage5ConditionsHe({ data }: Props) {
       <div style={{flex:1}}></div>
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoWhite} alt="BONIM" />
+        <img className="fb-logo" src={logoBlue} alt="BONIM" />
         <span className="fc"><span className="v">{data.clientName || '–'}</span> · <span className="v">{data.city || '–'}</span> · {BRAND.site}</span>
         <span className="fn">4</span>
       </div>

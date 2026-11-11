@@ -1,7 +1,7 @@
 import { KPFormData } from '@/hooks/useKPData';
 import { SYSTEMS } from '@/data/systems';
 import { BRAND } from '@/data/brand';
-import logoWhite from '@/assets/kp/bonim_logo_flat_white.png';
+import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 import heroImg from '@/assets/kp/sys_extra1.jpg';
 
 interface Props {
@@ -37,7 +37,7 @@ export function KPPage4Systems({ data, lang = 'ru' }: Props) {
               <div className="sys-card2-photo">
                 {s.photo
                   ? <img src={s.photo} alt={s.id} />
-                  : <div className="sys-card2-noimg"><img src={logoWhite} alt="BONIM" /></div>}
+                  : <div className="sys-card2-noimg"><img src={logoBlue} alt="BONIM" /></div>}
                 {selected && <span className="sys-card2-badge">{t.chosen}</span>}
               </div>
               <div className="sys-card2-head">
@@ -62,7 +62,7 @@ export function KPPage4Systems({ data, lang = 'ru' }: Props) {
       <div style={{flex:1}}></div>
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoWhite} alt="BONIM" />
+        <img className="fb-logo" src={logoBlue} alt="BONIM" />
         <span className="fc">{t.page} {data.orderNumber} · {BRAND.site}</span>
         <span className="fn">{t.n}</span>
       </div>

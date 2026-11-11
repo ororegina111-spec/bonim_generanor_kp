@@ -33,12 +33,13 @@ const labels = {
     length: 'Длина (см)',
     height: 'Высота (см)',
     finance: 'Финансы',
-    pricePerSqm: 'Цена за м² выбранной системы (₪, без НДС)',
+    pricePerSqm: 'Цена за м² выбранной системы (₪, БЕЗ НДС, 18% добавится сам)',
     extras: 'Доп. работы / Алюм. планки (₪)',
     area: 'Площадь',
-    systemCost: 'Стоимость системы',
+    systemCost: 'Стоимость системы (без НДС)',
+    vat: 'НДС 18%',
     extrasLabel: 'Доп. работы',
-    total: 'ИТОГО',
+    total: 'ИТОГО с НДС',
     downloadPDF: '🖨️ Скачать PDF',
     downloadHTML: '📄 Скачать HTML',
     reset: '↺ Сбросить данные',
@@ -73,12 +74,13 @@ const labels = {
     length: 'אורך (ס״מ)',
     height: 'גובה (ס״מ)',
     finance: 'כספים',
-    pricePerSqm: 'מחיר למ״ר של המערכת שנבחרה (₪, ללא מע״מ)',
+    pricePerSqm: 'מחיר למ״ר של המערכת (₪, ללא מע״מ, 18% יתווסף אוטומטית)',
     extras: 'עבודות נוספות / פסי אלומיניום (₪)',
     area: 'שטח',
-    systemCost: 'עלות מערכת',
+    systemCost: 'עלות מערכת (ללא מע״מ)',
+    vat: 'מע״מ 18%',
     extrasLabel: 'עבודות נוספות',
-    total: 'סה״כ',
+    total: 'סה״כ כולל מע״מ',
     downloadPDF: '🖨️ שמור כ-PDF',
     downloadHTML: '📄 הורד HTML',
     reset: '↺ איפוס נתונים',
@@ -212,6 +214,7 @@ export function KPSidebar({ data, computed, lang, onLangChange, onUpdate, onRese
           <div className="kp-calc-row"><span>{t.area}</span><span className="kp-calc-val">{computed.area} {lang === 'ru' ? 'м²' : 'מ״ר'}</span></div>
           <div className="kp-calc-row"><span>{t.systemCost}</span><span className="kp-calc-val">{computed.systemCost} ₪</span></div>
           <div className="kp-calc-row"><span>{t.extrasLabel}</span><span className="kp-calc-val">{computed.extrasStr} ₪</span></div>
+          <div className="kp-calc-row"><span>{t.vat}</span><span className="kp-calc-val">{computed.vatStr} ₪</span></div>
           <div className="kp-calc-row kp-calc-total"><span>{t.total}</span><span className="kp-calc-val">{computed.totalPrice} ₪</span></div>
         </div>
       </div>
