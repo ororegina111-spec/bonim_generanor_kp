@@ -1,5 +1,6 @@
 import { KPFormData } from '@/hooks/useKPData';
 import { BRAND } from '@/data/brand';
+import { KPContacts } from '@/components/kp/KPContacts';
 import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 
 interface Props {
@@ -60,6 +61,8 @@ export function KPPage5Conditions({ data }: Props) {
           ⏱ Срок изготовления: <strong>{BRAND.productionDays} рабочих дня</strong> с момента оплаты аванса.
         </div>
       </div>
+
+      <KPContacts lang="ru" />
 
       <div style={{flex:1}}></div>
 

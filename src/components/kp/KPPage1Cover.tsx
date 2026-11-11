@@ -3,6 +3,10 @@ import { getSystem } from '@/data/systems';
 import { BRAND } from '@/data/brand';
 import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 import hero from '@/assets/kp/hero_cover.jpg';
+import obj1 from '@/assets/kp/obj1.jpg';
+import obj2 from '@/assets/kp/obj2.jpg';
+import obj3 from '@/assets/kp/obj3.jpg';
+import { KPContacts } from '@/components/kp/KPContacts';
 
 interface Props {
   data: KPFormData;
@@ -59,6 +63,14 @@ export function KPPage1Cover({ data, computed }: Props) {
       <div className="cover-greet">
         Здравствуйте, <strong>{data.clientName || '–'}</strong>! Благодарим за интерес к <strong>BONIM</strong>. На основании ваших данных мы подготовили предложение по системе <strong>{data.productType}</strong>.
       </div>
+
+      <div className="cover-gallery">
+        <img src={obj1} alt="BONIM" />
+        <img src={obj2} alt="BONIM" />
+        <img src={obj3} alt="BONIM" />
+      </div>
+
+      <KPContacts lang="ru" />
 
       <div className="pg-footer">
         <img className="fb-logo" src={logoBlue} alt="BONIM" />

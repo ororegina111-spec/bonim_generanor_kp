@@ -134,3 +134,35 @@
 .kp-page .est-header::after, .kp-page .cond-head::after, .kp-page .cover-strip::after,
 .kp-page .sys-card2-head::after, .kp-page .pay-step::after, .kp-page .guarantee-box::after,
 .kp-page .sys-box::after, .kp-page .size-card::after, .kp-page .pg-footer::after { z-index: 0; }
+
+/* ── Фото объектов на обложке, контакты, компактные реквизиты ── */
+.kp-page .cover-greet { flex: none; padding-bottom: 14px; }
+.kp-page .cover-gallery {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  padding: 0 36px 14px;
+}
+.kp-page .cover-gallery img {
+  width: 100%; height: 46mm; object-fit: cover; border-radius: 6px; display: block;
+  filter: brightness(1.06) saturate(1.1);
+  box-shadow: 0 2px 8px rgba(5,68,131,.12);
+}
+.kp-page.cover .pg-footer { margin-top: auto; }
+
+.kp-page .kp-contacts { margin: 0 36px 12px; padding: 10px 14px; border: 1px solid #D5E1EE; border-radius: 6px; background: linear-gradient(135deg,#FFFFFF,#EEF4FB); }
+.kp-page .kp-contacts-title { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #4A86C8; font-weight: 700; margin-bottom: 6px; }
+.kp-page .kp-contacts-grid { display: grid; grid-template-columns: repeat(5, auto); gap: 6px 14px; justify-content: space-between; }
+.kp-page .kp-contacts-grid label { display: block; font-size: 0.62rem; letter-spacing: 1px; text-transform: uppercase; color: #7A8CA0; font-weight: 600; }
+.kp-page .kp-contacts-grid a { font-size: 0.74rem; color: #082B52; font-weight: 700; text-decoration: none; white-space: nowrap; }
+
+.kp-page .bank-box {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px 12px;
+  padding: 7px 12px; font-size: 0.74rem; line-height: 1.35;
+}
+.kp-page .bank-box .btitle { grid-column: 1 / -1; font-size: 0.78rem; margin-bottom: 2px; }
+.kp-page .bank-row { flex-direction: column; gap: 0; border: none; padding: 0; line-height: 1.3; }
+.kp-page .bank-row span { font-size: 0.62rem; }
+.kp-page .bank-row strong { font-size: 0.8rem; }
+
+/* Обложка по высоте A4 */
+.kp-page .cover-hero img { height: 86mm; }
+.kp-page .cover-gallery img { height: 42mm; }

@@ -1,5 +1,6 @@
 import { KPFormData } from '@/hooks/useKPData';
 import { BRAND } from '@/data/brand';
+import { KPContacts } from '@/components/kp/KPContacts';
 import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 
 interface Props {
@@ -60,6 +61,8 @@ export function KPPage5ConditionsHe({ data }: Props) {
           ⏱ זמן ייצור: <strong>{BRAND.productionDays} ימי עבודה</strong> ממועד תשלום המקדמה.
         </div>
       </div>
+
+      <KPContacts lang="he" />
 
       <div style={{flex:1}}></div>
 
