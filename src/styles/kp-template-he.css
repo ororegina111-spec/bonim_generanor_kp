@@ -1,0 +1,202 @@
+/* ════════════════════════════════════════════
+   KP TEMPLATE – HEBREW RTL OVERRIDES
+   Applied via .kp-rtl modifier on .kp-page
+   DO NOT MODIFY original kp-template.css
+════════════════════════════════════════════ */
+
+.kp-page.kp-rtl {
+  direction: rtl;
+  font-family: 'Heebo', sans-serif;
+}
+.kp-page.kp-rtl * { direction: rtl; }
+.kp-page.kp-rtl p { font-family: 'Heebo', sans-serif; }
+
+/* Cover RTL */
+.kp-page.kp-rtl .cover-top {
+  flex-direction: row-reverse;
+}
+.kp-page.kp-rtl .cover-logo {
+  flex-direction: row-reverse;
+}
+.kp-page.kp-rtl .cover-meta {
+  text-align: left;
+}
+.kp-page.kp-rtl .cover-title {
+  text-align: right;
+}
+.kp-page.kp-rtl .cover-strip {
+  direction: rtl;
+}
+.kp-page.kp-rtl .cover-greet {
+  text-align: right;
+}
+
+/* Inner sections RTL */
+.kp-page.kp-rtl .divider {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Estimate header RTL */
+.kp-page.kp-rtl .est-header {
+  text-align: right;
+}
+
+/* System box RTL – border on right side */
+.kp-page.kp-rtl .sys-box {
+  border-left: none;
+  border-right: 4px solid #4A86C8;
+  border-radius: 4px 0 0 4px;
+}
+
+/* Note box RTL */
+.kp-page.kp-rtl .note-box {
+  border-left: none;
+  border-right: 3px solid #4A86C8;
+  border-radius: 4px 0 0 4px;
+}
+
+/* Valid note RTL */
+.kp-page.kp-rtl .valid-note {
+  border-left: none;
+  border-right: 3px solid #4A86C8;
+  border-radius: 4px 0 0 4px;
+}
+
+/* Table RTL */
+.kp-page.kp-rtl table.spec {
+  direction: rtl;
+}
+.kp-page.kp-rtl table.spec th {
+  text-align: right;
+}
+.kp-page.kp-rtl table.spec th:last-child {
+  text-align: left;
+}
+.kp-page.kp-rtl table.spec td {
+  text-align: right;
+}
+.kp-page.kp-rtl table.spec td:last-child {
+  text-align: left;
+}
+
+/* Spec mini RTL */
+.kp-page.kp-rtl .spec-mini {
+  direction: rtl;
+}
+.kp-page.kp-rtl .spec-mini td {
+  text-align: right;
+}
+
+/* System hero RTL – gradient from right */
+.kp-page.kp-rtl .sys-hero-ov {
+  background: linear-gradient(270deg,rgba(8,43,82,.88) 0%,rgba(8,43,82,.2) 65%,transparent);
+}
+.kp-page.kp-rtl .sys-hero-txt {
+  left: auto;
+  right: 36px;
+  text-align: right;
+}
+
+/* System card RTL */
+.kp-page.kp-rtl .sys-card-head {
+  text-align: right;
+}
+.kp-page.kp-rtl .sys-card-body {
+  text-align: right;
+}
+
+/* FAQ RTL */
+.kp-page.kp-rtl .faq-box {
+  text-align: right;
+}
+.kp-page.kp-rtl .faq-q {
+  text-align: right;
+}
+.kp-page.kp-rtl .faq-a {
+  text-align: right;
+}
+
+/* Conditions RTL */
+.kp-page.kp-rtl .cond-head {
+  text-align: right;
+}
+.kp-page.kp-rtl .cond-list {
+  padding-right: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.kp-page.kp-rtl .cond-list li {
+  direction: rtl;
+  text-align: right;
+}
+.kp-page.kp-rtl .cond-list li::before {
+  content: '– ';
+  color: #4A86C8;
+  font-weight: 700;
+}
+.kp-page.kp-rtl .bank-box {
+  text-align: right;
+}
+
+/* Footer RTL */
+.kp-page.kp-rtl .pg-footer {
+  flex-direction: row-reverse;
+}
+
+/* Dim box (Hebrew estimate has dimension box instead of size cards) */
+.kp-page.kp-rtl .dim-box {
+  background: #F2F6FA;
+  border: 1px solid #D5E1EE;
+  border-radius: 6px;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.kp-page.kp-rtl .dim-box h4 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.05rem;
+  color: #082B52;
+  margin-bottom: 8px;
+  text-align: right;
+}
+.kp-page.kp-rtl .dim-row {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 4px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.kp-page.kp-rtl .dim-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4A86C8;
+  background: rgba(74,134,200,.1);
+  border-radius: 3px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.kp-page.kp-rtl .dim-line {
+  color: #5A5A5A;
+  font-size: 0.9rem;
+}
+
+/* About grid RTL */
+.kp-page.kp-rtl .about-grid {
+  direction: rtl;
+}
+.kp-page.kp-rtl .about-grid > div:first-child {
+  text-align: right;
+}
+
+/* Pay steps RTL */
+.kp-page.kp-rtl .pay-steps {
+  direction: rtl;
+}
+.kp-page.kp-rtl .pay-step {
+  text-align: center;
+}
+.kp-page.kp-rtl .pay-step .pct {
+  text-align: center;
+}
