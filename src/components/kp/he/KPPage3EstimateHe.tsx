@@ -117,7 +117,7 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
 
       <div className="pg-footer">
         <img className="fb-logo" src={logoBlue} alt="BONIM" />
-        <span className="fc">לקוח: <span className="v">{data.clientName || '–'}</span> · {BRAND.phone}</span>
+        <span className="fc">לקוח: <span className="v">{data.clientName || '–'}</span> · {BRAND.phoneLocal}</span>
         <span className="fn">2</span>
       </div>
     </div>

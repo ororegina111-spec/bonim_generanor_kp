@@ -74,7 +74,7 @@ export function KPPage1Cover({ data, computed }: Props) {
 
       <div className="pg-footer">
         <img className="fb-logo" src={logoBlue} alt="BONIM" />
-        <span className="fc">{BRAND.site} · {BRAND.phone}</span>
+        <span className="fc">{BRAND.site} · {BRAND.phoneLocal}</span>
         <span className="fn">1</span>
       </div>
     </div>
