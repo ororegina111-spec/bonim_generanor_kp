@@ -166,3 +166,42 @@
 /* Обложка по высоте A4 */
 .kp-page .cover-hero img { height: 86mm; }
 .kp-page .cover-gallery img { height: 42mm; }
+
+/* ════════════════════════════════
+   Белый фон страниц + тёмно-синие плашки с белым шрифтом
+════════════════════════════════ */
+.kp-page, .kp-page.cover { background: #FFFFFF; }
+.kp-page .cover-strip { background: #FFFFFF; }
+.kp-page .size-card, .kp-page .pay-step { background: #FFFFFF; }
+.kp-page .cond-head, .kp-page .pg-footer { background: #FFFFFF; }
+.kp-page .sys-box, .kp-page .guarantee-box { background: #F6FAFE; }
+
+/* Тёмная плашка с названием на обложке */
+.kp-page .cover-title { background: linear-gradient(135deg,#082B52 0%,#0B3566 100%); position: relative; overflow: hidden; padding: 22px 36px 18px; }
+.kp-page .cover-title::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.14) 20%, rgba(255,255,255,0) 36%, rgba(255,255,255,.08) 48%, rgba(255,255,255,0) 56%); }
+.kp-page .cover-title > * { position: relative; z-index: 1; }
+.kp-page .cover-title .label { color: #8FB9E3; }
+.kp-page .cover-title h1 { color: #FFFFFF; }
+.kp-page .cover-title h1 .gold-text { background: linear-gradient(135deg,#8FB9E3 0%,#D6E8F8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.kp-page .cover-title .sub { color: rgba(255,255,255,.75); }
+
+/* Тёмная шапка сметы */
+.kp-page .est-header { background: linear-gradient(135deg,#082B52 0%,#0B3566 100%); border-bottom: 2px solid #4A86C8; }
+.kp-page .est-header::after { background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.14) 20%, rgba(255,255,255,0) 36%, rgba(255,255,255,.08) 48%, rgba(255,255,255,0) 56%); }
+.kp-page .est-header .label { color: #8FB9E3; }
+.kp-page .est-header h2 { color: #FFFFFF; }
+.kp-page .est-header .sub { color: rgba(255,255,255,.8); }
+.kp-page .est-header .v { color: #FFFFFF; background: rgba(255,255,255,.14); border-bottom-color: #8FB9E3; }
+
+/* Тёмная плашка контактов */
+.kp-page .kp-contacts { background: linear-gradient(135deg,#082B52 0%,#0B3566 100%); border: none; position: relative; overflow: hidden; }
+.kp-page .kp-contacts::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.14) 20%, rgba(255,255,255,0) 36%, rgba(255,255,255,.08) 48%, rgba(255,255,255,0) 56%); }
+.kp-page .kp-contacts > * { position: relative; z-index: 1; }
+.kp-page .kp-contacts-title { color: #8FB9E3; }
+.kp-page .kp-contacts-grid label { color: rgba(255,255,255,.65); }
+.kp-page .kp-contacts-grid a { color: #FFFFFF; }
+
+/* Условия: шрифт мельче */
+.kp-page .cond-list li { font-size: 0.78rem; line-height: 1.5; margin-bottom: 5px; }
