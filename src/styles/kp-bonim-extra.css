@@ -46,3 +46,10 @@
 .kp-page.cover { min-height: 297mm; }
 .kp-page .cover-hero img { opacity: .72; }
 .kp-page .sys-card2-photo { height: 29mm; }
+
+/* Телефон: меню не фиксировано, а идёт сверху страницы */
+@media (max-width: 899px) {
+  .kp-sidebar { position: static !important; width: 100% !important; height: auto !important; border-right: none; border-bottom: 3px solid #4A86C8; }
+  .kp-sidebar-body { overflow: visible !important; }
+  .kp-page { margin-left: auto; margin-right: auto; }
+}

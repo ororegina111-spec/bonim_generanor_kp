@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useKPData } from '@/hooks/useKPData';
 import { KPSidebar, KPLang } from '@/components/kp/KPSidebar';
 import { KPPage1Cover } from '@/components/kp/KPPage1Cover';
@@ -18,6 +18,15 @@ import '@/styles/kp-bonim-light.css';
 const Index = () => {
   const { formData, updateField, resetForm, computed } = useKPData();
   const [lang, setLang] = useState<KPLang>('ru');
+
+  // Телефон: меню сверху, страницы КП уменьшаются по ширине экрана
+  const [vw, setVw] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  useEffect(() => {
+    const onResize = () => setVw(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  const narrow = vw < 900;
 
   const handlePrintPDF = async () => {
     if (!formData.clientName) {
@@ -40,7 +49,7 @@ const Index = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', minHeight: '100vh' }}>
       <KPSidebar
         data={formData}
         computed={computed}
@@ -55,11 +64,12 @@ const Index = () => {
       <div
         className="kp-preview-wrapper"
         style={{
-          marginLeft: '300px',
-          padding: '20px',
+          marginLeft: narrow ? 0 : '300px',
+          padding: narrow ? '8px 0' : '20px',
           background: '#2A2A2A',
           flex: 1,
           minHeight: '100vh',
+          ...(narrow ? { zoom: Math.min(1, vw / 794) } : {}),
         }}
       >
         <div id="kp-render-area">
