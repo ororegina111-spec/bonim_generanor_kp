@@ -1,11 +1,7 @@
+import { IMG } from '@/client';
 import { KPFormData, KPComputed } from '@/hooks/useKPData';
 import { getSystem } from '@/data/systems';
 import { BRAND } from '@/data/brand';
-import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
-import hero from '@/assets/kp/hero_cover.jpg';
-import obj1 from '@/assets/kp/obj1.jpg';
-import obj2 from '@/assets/kp/obj2.jpg';
-import obj3 from '@/assets/kp/obj3.jpg';
 import { KPContacts } from '@/components/kp/KPContacts';
 
 interface Props {
@@ -19,7 +15,7 @@ export function KPPage1Cover({ data, computed }: Props) {
     <div className="kp-page cover">
       <div className="cover-top">
         <div className="cover-logo">
-          <img src={logoBlue} alt="BONIM" />
+          <img src={IMG.logoOnLight} alt={BRAND.nameRu} />
         </div>
         <div className="cover-meta">
           <span className="order-no">№ {data.orderNumber || '–'}</span>
@@ -29,7 +25,7 @@ export function KPPage1Cover({ data, computed }: Props) {
       </div>
 
       <div className="cover-hero">
-        <img src={hero} alt="Hero" />
+        <img src={IMG.coverHero} alt="Hero" />
         <div className="cover-hero-grad"></div>
         <div className="cover-title">
           <div className="label">Коммерческое предложение</div>
@@ -65,15 +61,15 @@ export function KPPage1Cover({ data, computed }: Props) {
       </div>
 
       <div className="cover-gallery">
-        <img src={obj1} alt="BONIM" />
-        <img src={obj2} alt="BONIM" />
-        <img src={obj3} alt="BONIM" />
+        <img src={IMG.gallery[0]} alt={BRAND.nameRu} />
+        <img src={IMG.gallery[1]} alt={BRAND.nameRu} />
+        <img src={IMG.gallery[2]} alt={BRAND.nameRu} />
       </div>
 
       <KPContacts lang="ru" />
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoBlue} alt="BONIM" />
+        <img className="fb-logo" src={IMG.logoOnLight} alt={BRAND.nameRu} />
         <span className="fc">{BRAND.site} · {BRAND.phoneLocal}</span>
         <span className="fn">1</span>
       </div>

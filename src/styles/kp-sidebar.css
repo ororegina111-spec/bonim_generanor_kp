@@ -7,17 +7,17 @@
   left: 0; top: 0;
   width: 300px;
   height: 100vh;
-  background: #082B52;
+  background: var(--kp-dark);
   color: #fff;
   z-index: 9999;
-  border-right: 3px solid #4A86C8;
+  border-right: 3px solid var(--kp-accent);
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
 }
 
 .kp-sidebar-header {
-  background: linear-gradient(135deg, #054483, #7EA9D5, #054483);
+  background: linear-gradient(135deg, var(--kp-primary), var(--kp-light2), var(--kp-primary));
   padding: 16px 20px;
   flex-shrink: 0;
 }
@@ -55,7 +55,7 @@
   font-size: 0.68rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #4A86C8;
+  color: var(--kp-accent);
   margin-bottom: 5px;
   font-weight: 600;
 }
@@ -64,7 +64,7 @@
 .kp-field select {
   width: 100%;
   padding: 9px 12px;
-  background: #0B3566;
+  background: var(--kp-dark2);
   border: 1px solid #333;
   color: #fff;
   border-radius: 4px;
@@ -77,7 +77,7 @@
 .kp-field input:focus,
 .kp-field select:focus {
   outline: none;
-  border-color: #4A86C8;
+  border-color: var(--kp-accent);
 }
 
 .kp-field input::placeholder { color: #555; }
@@ -114,7 +114,7 @@
 }
 
 .kp-calc-total .kp-calc-val {
-  background: linear-gradient(135deg, #054483, #7EA9D5);
+  background: linear-gradient(135deg, var(--kp-primary), var(--kp-light2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1rem;
@@ -131,7 +131,7 @@
 }
 
 .kp-btn-pdf {
-  background: linear-gradient(135deg, #054483, #7EA9D5, #054483);
+  background: linear-gradient(135deg, var(--kp-primary), var(--kp-light2), var(--kp-primary));
   color: #000;
   border: none;
   padding: 14px;
@@ -148,9 +148,9 @@
 .kp-btn-pdf:hover { opacity: 0.9; }
 
 .kp-btn-html {
-  background: #0B3566;
-  color: #4A86C8;
-  border: 1px solid #4A86C8;
+  background: var(--kp-dark2);
+  color: var(--kp-accent);
+  border: 1px solid var(--kp-accent);
   padding: 10px;
   width: 100%;
   cursor: pointer;
@@ -185,7 +185,7 @@
     height: auto;
     position: relative;
     border-right: none;
-    border-bottom: 3px solid #4A86C8;
+    border-bottom: 3px solid var(--kp-accent);
   }
 }
 

@@ -1,5 +1,6 @@
 import { useState, useCallback, useMemo } from 'react';
 import type { SystemId } from '@/data/systems';
+import { CLIENT } from '@/client';
 
 export interface KPFormData {
   orderNumber: string;
@@ -30,7 +31,7 @@ export interface KPComputed {
 }
 
 /** НДС в Израиле, 18%. Менеджер вводит цены БЕЗ НДС, в КП клиент видит цены С НДС. */
-export const VAT_RATE = 0.18;
+export const VAT_RATE = CLIENT.brand.vatRate;
 
 const fmt = (n: number) => n.toLocaleString('ru-RU');
 
@@ -43,7 +44,7 @@ const defaultData: KPFormData = {
   date: todayStr(),
   clientName: '',
   city: '',
-  productType: 'FINZONE-30',
+  productType: CLIENT.defaultSystem,
   glassType: 'Прозрачное закалённое 10 мм',
   length: 450,
   height: 280,

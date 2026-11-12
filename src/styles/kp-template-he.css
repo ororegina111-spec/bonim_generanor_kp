@@ -45,21 +45,21 @@
 /* System box RTL – border on right side */
 .kp-page.kp-rtl .sys-box {
   border-left: none;
-  border-right: 4px solid #4A86C8;
+  border-right: 4px solid var(--kp-accent);
   border-radius: 4px 0 0 4px;
 }
 
 /* Note box RTL */
 .kp-page.kp-rtl .note-box {
   border-left: none;
-  border-right: 3px solid #4A86C8;
+  border-right: 3px solid var(--kp-accent);
   border-radius: 4px 0 0 4px;
 }
 
 /* Valid note RTL */
 .kp-page.kp-rtl .valid-note {
   border-left: none;
-  border-right: 3px solid #4A86C8;
+  border-right: 3px solid var(--kp-accent);
   border-radius: 4px 0 0 4px;
 }
 
@@ -90,7 +90,7 @@
 
 /* System hero RTL – gradient from right */
 .kp-page.kp-rtl .sys-hero-ov {
-  background: linear-gradient(270deg,rgba(8,43,82,.88) 0%,rgba(8,43,82,.2) 65%,transparent);
+  background: linear-gradient(270deg,rgba(var(--kp-dark-rgb),.88) 0%,rgba(var(--kp-dark-rgb),.2) 65%,transparent);
 }
 .kp-page.kp-rtl .sys-hero-txt {
   left: auto;
@@ -132,7 +132,7 @@
 }
 .kp-page.kp-rtl .cond-list li::before {
   content: '– ';
-  color: #4A86C8;
+  color: var(--kp-accent);
   font-weight: 700;
 }
 .kp-page.kp-rtl .bank-box {
@@ -146,8 +146,8 @@
 
 /* Dim box (Hebrew estimate has dimension box instead of size cards) */
 .kp-page.kp-rtl .dim-box {
-  background: #F2F6FA;
-  border: 1px solid #D5E1EE;
+  background: var(--kp-tint2);
+  border: 1px solid var(--kp-line);
   border-radius: 6px;
   padding: 12px 20px;
   margin-bottom: 16px;
@@ -156,7 +156,7 @@
 .kp-page.kp-rtl .dim-box h4 {
   font-family: 'Heebo', sans-serif;
   font-size: 1.05rem;
-  color: #082B52;
+  color: var(--kp-dark);
   margin-bottom: 8px;
   text-align: right;
 }
@@ -171,8 +171,8 @@
 .kp-page.kp-rtl .dim-tag {
   font-size: 0.78rem;
   font-weight: 700;
-  color: #4A86C8;
-  background: rgba(74,134,200,.1);
+  color: var(--kp-accent);
+  background: rgba(var(--kp-accent-rgb),.1);
   border-radius: 3px;
   padding: 2px 8px;
   white-space: nowrap;

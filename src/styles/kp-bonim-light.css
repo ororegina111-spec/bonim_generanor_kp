@@ -1,7 +1,7 @@
 /* ════════════════════════════════
    BONIM: светлая стилистика с бликами как на стекле
    Подключается последней и переопределяет тёмные блоки шаблона.
-   Цвета: тёмно-синий текст #082B52, синий #054483, светло-голубой #EAF3FC.
+   Цвета: тёмно-синий текст var(--kp-dark), синий var(--kp-primary), светло-голубой var(--kp-tint).
 ════════════════════════════════ */
 
 /* Блик как на стекле: белая диагональная полоса поверх блока */
@@ -35,51 +35,51 @@
 }
 
 /* ── Обложка ── */
-.kp-page.cover { background: linear-gradient(165deg,#FFFFFF 0%,#EAF3FC 60%,#F7FBFF 100%); }
-.kp-page .cover-top { border-bottom: 1px solid #D5E1EE; }
+.kp-page.cover { background: linear-gradient(165deg,#FFFFFF 0%,var(--kp-tint) 60%,var(--kp-tint) 100%); }
+.kp-page .cover-top { border-bottom: 1px solid var(--kp-line); }
 .kp-page .cover-logo img { height: 58px; }
 .kp-page .cover-meta { color: #5A6B7D; }
 .kp-page .cover-meta .order-no {
-  background: none; -webkit-text-fill-color: #054483; color: #054483;
+  background: none; -webkit-text-fill-color: var(--kp-primary); color: var(--kp-primary);
 }
-.kp-page .cover-hero { flex: none; background: #EAF3FC; }
+.kp-page .cover-hero { flex: none; background: var(--kp-tint); }
 .kp-page .cover-hero img { height: 98mm; opacity: 1; filter: brightness(1.08) saturate(1.12); }
 .kp-page .cover-hero-grad { display: none; }
 .kp-page .cover-title { position: static; padding: 22px 36px 14px; }
-.kp-page .cover-title .label { color: #4A86C8; }
-.kp-page .cover-title h1 { color: #082B52; }
+.kp-page .cover-title .label { color: var(--kp-accent); }
+.kp-page .cover-title h1 { color: var(--kp-dark); }
 .kp-page .cover-title h1 .gold-text {
-  background: linear-gradient(135deg,#054483 0%,#4A86C8 100%);
+  background: linear-gradient(135deg,var(--kp-primary) 0%,var(--kp-accent) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .kp-page .cover-title .sub { color: #5A6B7D; }
 .kp-page .cover-strip {
-  background: #EAF3FC; border-top: 1px solid #D5E1EE; border-bottom: 1px solid #D5E1EE;
+  background: var(--kp-tint); border-top: 1px solid var(--kp-line); border-bottom: 1px solid var(--kp-line);
 }
-.kp-page .strip-item label { color: #4A86C8; }
-.kp-page .strip-item span { color: #082B52; }
+.kp-page .strip-item label { color: var(--kp-accent); }
+.kp-page .strip-item span { color: var(--kp-dark); }
 .kp-page .cover-greet { color: #3B4C60; border-top: none; }
-.kp-page .cover-greet strong { color: #082B52; }
+.kp-page .cover-greet strong { color: var(--kp-dark); }
 
 /* ── Смета ── */
 .kp-page .est-header {
-  background: linear-gradient(135deg,#EAF3FC 0%,#FFFFFF 100%);
-  border-bottom: 2px solid #4A86C8;
+  background: linear-gradient(135deg,var(--kp-tint) 0%,#FFFFFF 100%);
+  border-bottom: 2px solid var(--kp-accent);
 }
-.kp-page .est-header .label { color: #4A86C8; }
-.kp-page .est-header h2 { color: #082B52; }
+.kp-page .est-header .label { color: var(--kp-accent); }
+.kp-page .est-header h2 { color: var(--kp-dark); }
 .kp-page .est-header .sub { color: #5A6B7D; }
-.kp-page .size-card { background: linear-gradient(135deg,#FFFFFF,#F2F7FC); }
-.kp-page table.spec th { background: #DCE9F6; color: #082B52; }
-.kp-page table.spec tr:nth-child(even) td { background: #F6FAFE; }
+.kp-page .size-card { background: linear-gradient(135deg,#FFFFFF,var(--kp-tint)); }
+.kp-page table.spec th { background: var(--kp-tint3); color: var(--kp-dark); }
+.kp-page table.spec tr:nth-child(even) td { background: var(--kp-tint2); }
 .kp-page table.spec .total td {
-  background: #EAF3FC; color: #082B52; border-top: 2px solid #4A86C8;
+  background: var(--kp-tint); color: var(--kp-dark); border-top: 2px solid var(--kp-accent);
 }
 .kp-page table.spec .total td:last-child {
-  color: #054483 !important; -webkit-text-fill-color: #054483; text-shadow: none;
+  color: var(--kp-primary) !important; -webkit-text-fill-color: var(--kp-primary); text-shadow: none;
 }
-.kp-page .guarantee-box { background: #EEF4FB; border: 1px solid #D5E1EE; }
-.kp-page .guarantee-box h5 { color: #054483; }
+.kp-page .guarantee-box { background: var(--kp-tint); border: 1px solid var(--kp-line); }
+.kp-page .guarantee-box h5 { color: var(--kp-primary); }
 .kp-page .guarantee-box p { color: #3B4C60; }
 
 /* ── Страница «Системы» ── */
@@ -87,36 +87,36 @@
   background: linear-gradient(90deg,rgba(255,255,255,.82) 0%,rgba(255,255,255,.35) 45%,rgba(255,255,255,0) 75%);
 }
 .kp-page .sys-hero img { filter: brightness(1.08) saturate(1.1); }
-.kp-page .sys-hero-txt .label { color: #054483; }
-.kp-page .sys-hero-txt h2 { color: #082B52; }
-.kp-page .sys-card2-head { background: linear-gradient(135deg,#EAF3FC,#FFFFFF); border-bottom: 1px solid #D5E1EE; }
-.kp-page .sys-card2-head h4 { color: #082B52; }
+.kp-page .sys-hero-txt .label { color: var(--kp-primary); }
+.kp-page .sys-hero-txt h2 { color: var(--kp-dark); }
+.kp-page .sys-card2-head { background: linear-gradient(135deg,var(--kp-tint),#FFFFFF); border-bottom: 1px solid var(--kp-line); }
+.kp-page .sys-card2-head h4 { color: var(--kp-dark); }
 .kp-page .sys-card2-head p { color: #5A6B7D; }
 .kp-page .sys-card2-photo > img { filter: brightness(1.06) saturate(1.1); }
 
 /* ── Условия ── */
 .kp-page .cond-head {
-  background: linear-gradient(135deg,#EAF3FC 0%,#FFFFFF 100%);
-  border-bottom: 2px solid #4A86C8;
+  background: linear-gradient(135deg,var(--kp-tint) 0%,#FFFFFF 100%);
+  border-bottom: 2px solid var(--kp-accent);
 }
-.kp-page .cond-head .label { color: #4A86C8; }
-.kp-page .cond-head h2 { color: #082B52; }
+.kp-page .cond-head .label { color: var(--kp-accent); }
+.kp-page .cond-head h2 { color: var(--kp-dark); }
 .kp-page .pay-step {
-  background: linear-gradient(135deg,#FFFFFF 0%,#EAF3FC 100%);
-  border: 1px solid #BBD3EC;
-  box-shadow: 0 2px 8px rgba(5,68,131,.08);
+  background: linear-gradient(135deg,#FFFFFF 0%,var(--kp-tint) 100%);
+  border: 1px solid var(--kp-line2);
+  box-shadow: 0 2px 8px rgba(var(--kp-primary-rgb),.08);
 }
 .kp-page .pay-step .pct {
-  background: none; -webkit-text-fill-color: #054483; color: #054483;
+  background: none; -webkit-text-fill-color: var(--kp-primary); color: var(--kp-primary);
 }
-.kp-page .pay-step .pct-sub { color: #4A86C8; }
+.kp-page .pay-step .pct-sub { color: var(--kp-accent); }
 .kp-page .pay-step .when { color: #4A5B6E; }
-.kp-page .pay-step.pay-free { border-color: #4A86C8; }
+.kp-page .pay-step.pay-free { border-color: var(--kp-accent); }
 
 /* ── Подвал ── */
 .kp-page .pg-footer {
-  background: linear-gradient(135deg,#EAF3FC 0%,#FFFFFF 100%);
-  border-top: 1px solid #D5E1EE;
+  background: linear-gradient(135deg,var(--kp-tint) 0%,#FFFFFF 100%);
+  border-top: 1px solid var(--kp-line);
 }
 .kp-page .pg-footer .fc { color: #5A6B7D; }
 .kp-page .pg-footer .fn { color: #7A8CA0; }
@@ -144,15 +144,15 @@
 .kp-page .cover-gallery img {
   width: 100%; height: 46mm; object-fit: cover; border-radius: 6px; display: block;
   filter: brightness(1.06) saturate(1.1);
-  box-shadow: 0 2px 8px rgba(5,68,131,.12);
+  box-shadow: 0 2px 8px rgba(var(--kp-primary-rgb),.12);
 }
 .kp-page.cover .pg-footer { margin-top: auto; }
 
-.kp-page .kp-contacts { margin: 0 36px 12px; padding: 10px 14px; border: 1px solid #D5E1EE; border-radius: 6px; background: linear-gradient(135deg,#FFFFFF,#EEF4FB); }
-.kp-page .kp-contacts-title { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #4A86C8; font-weight: 700; margin-bottom: 6px; }
+.kp-page .kp-contacts { margin: 0 36px 12px; padding: 10px 14px; border: 1px solid var(--kp-line); border-radius: 6px; background: linear-gradient(135deg,#FFFFFF,var(--kp-tint)); }
+.kp-page .kp-contacts-title { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--kp-accent); font-weight: 700; margin-bottom: 6px; }
 .kp-page .kp-contacts-grid { display: grid; grid-template-columns: repeat(5, auto); gap: 6px 14px; justify-content: space-between; }
 .kp-page .kp-contacts-grid label { display: block; font-size: 0.62rem; letter-spacing: 1px; text-transform: uppercase; color: #7A8CA0; font-weight: 600; }
-.kp-page .kp-contacts-grid a { font-size: 0.74rem; color: #082B52; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.kp-page .kp-contacts-grid a { font-size: 0.74rem; color: var(--kp-dark); font-weight: 700; text-decoration: none; white-space: nowrap; }
 
 .kp-page .bank-box {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px 12px;
@@ -174,32 +174,32 @@
 .kp-page .cover-strip { background: #FFFFFF; }
 .kp-page .size-card, .kp-page .pay-step { background: #FFFFFF; }
 .kp-page .cond-head, .kp-page .pg-footer { background: #FFFFFF; }
-.kp-page .sys-box, .kp-page .guarantee-box { background: #F6FAFE; }
+.kp-page .sys-box, .kp-page .guarantee-box { background: var(--kp-tint2); }
 
 /* Тёмная плашка с названием на обложке */
-.kp-page .cover-title { background: linear-gradient(135deg,#082B52 0%,#0B3566 100%); position: relative; overflow: hidden; padding: 22px 36px 18px; }
+.kp-page .cover-title { background: linear-gradient(135deg,var(--kp-dark) 0%,var(--kp-dark2) 100%); position: relative; overflow: hidden; padding: 22px 36px 18px; }
 .kp-page .cover-title::after { content: ''; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.14) 20%, rgba(255,255,255,0) 36%, rgba(255,255,255,.08) 48%, rgba(255,255,255,0) 56%); }
 .kp-page .cover-title > * { position: relative; z-index: 1; }
-.kp-page .cover-title .label { color: #8FB9E3; }
+.kp-page .cover-title .label { color: var(--kp-light3); }
 .kp-page .cover-title h1 { color: #FFFFFF; }
-.kp-page .cover-title h1 .gold-text { background: linear-gradient(135deg,#8FB9E3 0%,#D6E8F8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.kp-page .cover-title h1 .gold-text { background: linear-gradient(135deg,var(--kp-light3) 0%,var(--kp-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .kp-page .cover-title .sub { color: rgba(255,255,255,.75); }
 
 /* Тёмная шапка сметы */
-.kp-page .est-header { background: linear-gradient(135deg,#082B52 0%,#0B3566 100%); border-bottom: 2px solid #4A86C8; }
+.kp-page .est-header { background: linear-gradient(135deg,var(--kp-dark) 0%,var(--kp-dark2) 100%); border-bottom: 2px solid var(--kp-accent); }
 .kp-page .est-header::after { background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.14) 20%, rgba(255,255,255,0) 36%, rgba(255,255,255,.08) 48%, rgba(255,255,255,0) 56%); }
-.kp-page .est-header .label { color: #8FB9E3; }
+.kp-page .est-header .label { color: var(--kp-light3); }
 .kp-page .est-header h2 { color: #FFFFFF; }
 .kp-page .est-header .sub { color: rgba(255,255,255,.8); }
-.kp-page .est-header .v { color: #FFFFFF; background: rgba(255,255,255,.14); border-bottom-color: #8FB9E3; }
+.kp-page .est-header .v { color: #FFFFFF; background: rgba(255,255,255,.14); border-bottom-color: var(--kp-light3); }
 
 /* Тёмная плашка контактов */
-.kp-page .kp-contacts { background: linear-gradient(135deg,#082B52 0%,#0B3566 100%); border: none; position: relative; overflow: hidden; }
+.kp-page .kp-contacts { background: linear-gradient(135deg,var(--kp-dark) 0%,var(--kp-dark2) 100%); border: none; position: relative; overflow: hidden; }
 .kp-page .kp-contacts::after { content: ''; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.14) 20%, rgba(255,255,255,0) 36%, rgba(255,255,255,.08) 48%, rgba(255,255,255,0) 56%); }
 .kp-page .kp-contacts > * { position: relative; z-index: 1; }
-.kp-page .kp-contacts-title { color: #8FB9E3; }
+.kp-page .kp-contacts-title { color: var(--kp-light3); }
 .kp-page .kp-contacts-grid label { color: rgba(255,255,255,.65); }
 .kp-page .kp-contacts-grid a { color: #FFFFFF; }
 

@@ -1,5 +1,6 @@
 import { KPFormData, KPComputed } from '@/hooks/useKPData';
 import { SYSTEMS } from '@/data/systems';
+import { CLIENT } from '@/client';
 import '@/styles/kp-sidebar.css';
 
 export type KPLang = 'ru' | 'he';
@@ -17,7 +18,7 @@ interface Props {
 
 const labels = {
   ru: {
-    title: '🏠 Генератор КП – BONIM',
+    title: '🏠 Генератор КП – ' + CLIENT.name,
     order: 'Реквизиты заказа',
     orderNo: '№ Заказа',
     date: 'Дата',
@@ -58,7 +59,7 @@ const labels = {
     },
   },
   he: {
-    title: '🏠 מחולל הצעות מחיר – BONIM',
+    title: '🏠 מחולל הצעות מחיר – ' + CLIENT.name,
     order: 'פרטי הזמנה',
     orderNo: 'מס׳ הזמנה',
     date: 'תאריך',
@@ -112,10 +113,10 @@ export function KPSidebar({ data, computed, lang, onLangChange, onUpdate, onRese
             type="button"
             onClick={() => onLangChange('ru')}
             style={{
-              flex:1, padding:'8px 0', border: lang === 'ru' ? '2px solid #4A86C8' : '1px solid rgba(74,134,200,.4)',
+              flex:1, padding:'8px 0', border: lang === 'ru' ? '2px solid var(--kp-accent)' : '1px solid rgba(var(--kp-accent-rgb),.4)',
               borderRadius:'4px', cursor:'pointer', fontWeight:700, fontSize:'0.85rem',
-              background: lang === 'ru' ? 'linear-gradient(135deg,#4A86C8,#A9CCEC,#4A86C8)' : '#0B3566',
-              color: lang === 'ru' ? '#082B52' : '#4A86C8',
+              background: lang === 'ru' ? 'linear-gradient(135deg,var(--kp-accent),var(--kp-light),var(--kp-accent))' : 'var(--kp-dark2)',
+              color: lang === 'ru' ? 'var(--kp-dark)' : 'var(--kp-accent)',
               position:'relative', zIndex:10,
             }}
           >
@@ -125,10 +126,10 @@ export function KPSidebar({ data, computed, lang, onLangChange, onUpdate, onRese
             type="button"
             onClick={() => onLangChange('he')}
             style={{
-              flex:1, padding:'8px 0', border: lang === 'he' ? '2px solid #4A86C8' : '1px solid rgba(74,134,200,.4)',
+              flex:1, padding:'8px 0', border: lang === 'he' ? '2px solid var(--kp-accent)' : '1px solid rgba(var(--kp-accent-rgb),.4)',
               borderRadius:'4px', cursor:'pointer', fontWeight:700, fontSize:'0.85rem',
-              background: lang === 'he' ? 'linear-gradient(135deg,#4A86C8,#A9CCEC,#4A86C8)' : '#0B3566',
-              color: lang === 'he' ? '#082B52' : '#4A86C8',
+              background: lang === 'he' ? 'linear-gradient(135deg,var(--kp-accent),var(--kp-light),var(--kp-accent))' : 'var(--kp-dark2)',
+              color: lang === 'he' ? 'var(--kp-dark)' : 'var(--kp-accent)',
               position:'relative', zIndex:10,
             }}
           >

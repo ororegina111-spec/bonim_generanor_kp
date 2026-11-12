@@ -1,3 +1,4 @@
+import { CLIENT } from '@/client';
 /**
  * Export KP as a self-contained HTML file.
  * Converts all images to inline base64 data URIs for portability.
@@ -71,7 +72,7 @@ async function buildSelfContainedHTML(renderAreaId: string, fileName: string, la
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${isHe ? 'הצעת מחיר' : 'КП'} – BONIM – ${fileName}</title>
+<title>${isHe ? 'הצעת מחיר' : 'КП'} – ${CLIENT.name} – ${fileName}</title>
 <link href="${fontLink}" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }

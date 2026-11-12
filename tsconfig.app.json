@@ -11,6 +11,7 @@
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "noEmit": true,
     "noFallthroughCasesInSwitch": false,
     "noImplicitAny": false,
@@ -19,6 +20,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@client/*": [
+        "./clients/bonim/*"
       ]
     },
     "skipLibCheck": true,

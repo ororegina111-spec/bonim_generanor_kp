@@ -1,7 +1,7 @@
+import { IMG, CLIENT, fill } from '@/client';
 import { KPFormData, KPComputed } from '@/hooks/useKPData';
 import { getSystem } from '@/data/systems';
 import { BRAND } from '@/data/brand';
-import logoBlue from '@/assets/kp/bonim_logo_flat_blue.png';
 
 interface Props {
   data: KPFormData;
@@ -57,7 +57,7 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
           <h4>{data.productType} – {sys.he.tagline}</h4>
           <p>{sys.he.desc}</p>
           <h4 className="glaz-head" style={{fontSize:'1.05rem', marginTop:'10px'}}>זיגוג</h4>
-          <p>זכוכית בטיחות: מחוסמת 10 מ״מ או טריפלקס 5+5 מ״מ. כל הזכוכיות עומדות בדרישות התקן הישראלי.</p>
+          <p>{fill(CLIENT.texts.he.glassNote)}</p>
         </div>
 
         <table className="spec" style={{marginBottom:'12px'}}>
@@ -109,14 +109,14 @@ export function KPPage3EstimateHe({ data, computed }: Props) {
 
         <div className="guarantee-box" style={{marginTop:'6px', padding:'8px 16px', display:'flex', alignItems:'center', gap:'10px'}}>
           <h5 style={{fontSize:'0.85rem', whiteSpace:'nowrap'}}>🛡️ אחריות</h5>
-          <p style={{fontSize:'0.78rem', lineHeight:'1.35', margin:0}}>אחריות לשנה על המוצר ועל ההתקנה. תקפה בתנאי שימוש תקין ותחזוקה נאותה.</p>
+          <p style={{fontSize:'0.78rem', lineHeight:'1.35', margin:0}}>{fill(CLIENT.texts.he.warranty)}</p>
         </div>
       </div>
 
       <div style={{flex:1}}></div>
 
       <div className="pg-footer">
-        <img className="fb-logo" src={logoBlue} alt="BONIM" />
+        <img className="fb-logo" src={IMG.logoOnLight} alt={BRAND.nameRu} />
         <span className="fc">לקוח: <span className="v">{data.clientName || '–'}</span> · {BRAND.phoneLocal}</span>
         <span className="fn">2</span>
       </div>
